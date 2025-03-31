@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('https://cdnb.artstation.com/p/assets/images/images/024/974/339/large/annelien-l-miraculous-pc-background.jpg?1584139532');
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    background-color: rgba(255, 255, 255, 0.263);
+    padding: 15px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#info {
+    background-color: rgba(255, 255, 255, 0.747);
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 10px;
+}
+.container {
+    margin-top: 50px;
+}
+
+img {
+    width: auto;
+    height: 400px;
+}
+
+button {
+    width: 200px;
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #b90000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+#character-img {
+    transition: opacity 2s ease-in-out;
+}
+
+.sleeping {
+    opacity: 0;
+}
+
+.awake {
+    opacity: 1;
+}
+
+@keyframes shakeAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#character-img.shaking {
+    animation: shakeAnimation 0.2s ease-in-out infinite;
+}
+
+@keyframes flyUpDown {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-300px) rotate(-10deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(0deg);
+    }
+}
+
+#character-img.flying {
+    animation: flyUpDown 5s ease-in-out infinite;
+    transition: transform 0.1s ease-in-out;
+}
+
+@keyframes sway {
+    0% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+#character-img.eating {
+    animation: sway 0.5s ease-in-out infinite;
+}
+
